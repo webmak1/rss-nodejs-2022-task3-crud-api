@@ -1,14 +1,3 @@
-import * as fs from 'fs';
-
-const writeDataToFile = (filename: any, content: any) => {
-  // @ts-ignore
-  fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err) => {
-    if (err) {
-      console.log(err);
-    }
-  });
-};
-
 const getPostData = (req: any) => {
   return new Promise((resolve, reject) => {
     try {
@@ -28,6 +17,5 @@ const getPostData = (req: any) => {
 };
 
 export const Utils = {
-  writeDataToFile,
   getPostData,
 };
