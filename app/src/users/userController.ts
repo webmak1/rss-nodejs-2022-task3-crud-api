@@ -1,5 +1,5 @@
-import { User } from 'users/InMemoryDb';
-import { Utils } from 'utils';
+import { User } from '../users/InMemoryDb';
+import { Utils } from '../utils';
 
 const getAll = async (_req: any, res: any) => {
   try {

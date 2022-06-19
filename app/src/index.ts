@@ -1,12 +1,8 @@
-import { CONFIG } from 'common/config';
 import * as http from 'http';
-import { Controller } from 'users/userController';
+import { CONFIG } from './common/config';
+import { Controller } from './users/userController';
 
 const server = http.createServer((req, res) => {
-  console.log(req.url?.split('/'));
-  console.log(req.method);
-  console.log(req.url?.match(/\/api\/users\/\w+/));
-
   if (req.url === '/api/users' && req.method === 'GET') {
     Controller.getAll(req, res);
   } else if (req.url?.match(/\/api\/users\/\w+/) && req.method === 'GET') {
@@ -28,6 +24,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(CONFIG.PORT, () =>
+server.listen(CONFIG.PORT || 4000, () =>
   console.log(`Server running on port ${CONFIG.PORT}`)
 );
