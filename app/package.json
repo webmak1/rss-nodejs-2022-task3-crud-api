@@ -6,10 +6,10 @@
   "scripts": {
     "start": "NODE_PATH=./src ts-node src/index.ts",
     "build": "NODE_PATH=./src tsc",
-    "start:prod": "npm run build && NODE_PATH=./src node build/index.js",
+    "start:build": "npm run build && NODE_PATH=./src node build/index.js",
     "start:dev": "NODE_PATH=./src nodemon",
     "webpack:bundle": "webpack --mode production",
-    "start:bundle": "npm run webpack:bundle && NODE_PATH=./src node dist/bundle.js"
+    "start:prod": "npm run webpack:bundle && NODE_PATH=./src node dist/bundle.js"
   },
   "keywords": [],
   "author": "",
