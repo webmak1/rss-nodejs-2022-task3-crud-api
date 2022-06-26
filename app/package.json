@@ -1,0 +1,34 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "NODE_PATH=./src ts-node src/index.ts",
+    "build": "NODE_PATH=./src tsc",
+    "start:build": "npm run build && NODE_PATH=./src node build/index.js",
+    "start:dev": "NODE_PATH=./src nodemon",
+    "webpack:bundle": "webpack --mode production",
+    "start:prod": "npm run webpack:bundle && NODE_PATH=./src node dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^18.0.0",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.18.0",
+    "nodemon": "^2.0.16",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "uuid": "^8.3.2"
+  }
+}

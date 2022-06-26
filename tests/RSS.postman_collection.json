@@ -1,0 +1,794 @@
+{
+	"info": {
+		"_postman_id": "83863d9a-5e05-46fe-b795-65a07e911243",
+		"name": "RSS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17617468"
+	},
+	"item": [
+		{
+			"name": "Test Case1",
+			"item": [
+				{
+					"name": "Add User 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    // console.log(pm.response.json());",
+									"    pm.response.to.have.status(201);",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('pavel');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('15');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('sport,music,games');",
+									"",
+									"})",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"pavel\", \"age\":\"15\", \"hobbies\":\"sport,music,games\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('marina');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('25');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('books,art,travel');",
+									"",
+									"})",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"marina\", \"age\":\"25\", \"hobbies\":\"books,art,travel\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    pm.response.to.have.status(201);",
+									"",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('oleg');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('21');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('kino,vino,domino');",
+									"",
+									"})",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"oleg\", \"age\":\"21\", \"hobbies\":\"kino,vino,domino\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    pm.response.to.have.status(200);",
+									"    pm.expect(pm.response.json().length).to.be.above(2);",
+									"    // console.log(pm.response.json().length);",
+									"    // console.log(pm.response.json()[0].id);",
+									"",
+									"    pm.globals.set(\"uuid\", pm.response.json()[0].id);",
+									"    // const user1 = pm.globals.get(\"uuid\");",
+									"    // console.log(abcd);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User\", function() {",
+									"    pm.response.to.have.status(200);",
+									"",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('pavel');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('15');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('sport,music,games');",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/{{uuid}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"{{uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.json;",
+									"",
+									"    const updatedUserId = pm.globals.get(\"uuid\");",
+									"    console.log(updatedUserId);",
+									"})",
+									"",
+									"pm.test(\"Check User Update\", function() {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('zaurbek');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('24');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('box,running,swimming');",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"zaurbek\", \"age\":\"24\", \"hobbies\":\"box,running,swimming\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/{{uuid}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"{{uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(204);",
+									"    // pm.response.to.be.ok;",
+									"    // pm.response.to.json;",
+									"})",
+									"",
+									"// pm.test(\"Check User Deletion\", function() {",
+									"//     var jsonData = JSON.parse(responseBody);",
+									"    ",
+									"//     console.log(jsonData.message);",
+									"    ",
+									"//     const deletedUserId = pm.globals.get(\"uuid\");",
+									"    ",
+									"//     const resultMessage = 'User ' + deletedUserId + ' removed'",
+									"",
+									"//     // console.log('HI');",
+									"//     // console.log(resultMessage);",
+									"//     // console.log(jsonData.message);",
+									"//     // console.log('EMD');",
+									"//     pm.expect(jsonData.message).to.eql(resultMessage);",
+									"// })"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"zaurbek\", \"age\":\"24\", \"hobbies\":\"box,running,swimming\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/{{uuid}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"{{uuid}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Case2",
+			"item": [
+				{
+					"name": "Add User 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    // console.log(pm.response.json());",
+									"    pm.response.to.have.status(201);",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('pavel');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('15');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('sport,music,games');",
+									"",
+									"})",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"pavel\", \"age\":\"15\", \"hobbies\":\"sport,music,games\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('marina');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('25');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('books,art,travel');",
+									"",
+									"})",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"marina\", \"age\":\"25\", \"hobbies\":\"books,art,travel\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(\"Created\");",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Creation\", function() {",
+									"    pm.response.to.have.status(201);",
+									"",
+									"    pm.expect(pm.response.json().id).to.exist;",
+									"    pm.expect(pm.response.json().id).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"",
+									"    pm.expect(pm.response.json().username).to.exist;",
+									"    pm.expect(pm.response.json().username).to.not.be.null;",
+									"    pm.expect(pm.response.json().username).to.be.a('string');",
+									"    pm.expect(pm.response.json().username).to.eql('oleg');",
+									"",
+									"    pm.expect(pm.response.json().age).to.exist;",
+									"    pm.expect(pm.response.json().age).to.not.be.null;",
+									"    pm.expect(pm.response.json().age).to.be.a('string');",
+									"    pm.expect(pm.response.json().age).to.eql('21');",
+									"",
+									"    pm.expect(pm.response.json().hobbies).to.exist;",
+									"    pm.expect(pm.response.json().hobbies).to.not.be.null;",
+									"    pm.expect(pm.response.json().hobbies).to.be.a('string');",
+									"    pm.expect(pm.response.json().hobbies).to.eql('kino,vino,domino');",
+									"",
+									"})",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"oleg\", \"age\":\"21\", \"hobbies\":\"kino,vino,domino\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(404);",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Deletion\", function() {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    myObj = JSON.parse(jsonData);",
+									"    pm.expect(myObj.message).to.eql('User Not Found');",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"zaurbek\", \"age\":\"24\", \"hobbies\":\"box,running,swimming\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/c38467da-7992-46cc-b1e3-b5857ef24c14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"c38467da-7992-46cc-b1e3-b5857ef24c14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Case3",
+			"item": [
+				{
+					"name": "Add User 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status is ok, respnse is json\", function() {",
+									"    pm.response.to.have.status(400);",
+									"    pm.response.to.json;",
+									"})",
+									"",
+									"pm.test(\"Check User Deletion\", function() {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    pm.expect(jsonData.message).to.eql('[Error] Wrong input');",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"product\":\"123\", \"shop\":\"152\", \"location\":\"St.Petersburg\"}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
